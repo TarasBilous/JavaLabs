@@ -1,6 +1,5 @@
 package lab2Java;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,16 +11,12 @@ public class PartyManager {
 		return dishesList;
 	}
 
-	public void addDishesList(Dishes newDishes) {
+	public void addDish(Dishes newDishes) {
 		dishesList.add(newDishes);
 	}
 
 	public void dishesSortByMaterial(List<Dishes> newList) {
-		newList.sort(new Comparator<Dishes>() {
-			public int compare(Dishes d1, Dishes d2) {
-				return d1.getDishesMaterial().compareTo(d2.getDishesMaterial());
-			}
-		});
+		newList.sort((d1, d2) -> d1.getDishesMaterial().compareTo(d2.getDishesMaterial()));
 	}
 
 	public List<Dishes> findByDishName(String... dishNames) {
