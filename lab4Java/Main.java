@@ -1,11 +1,11 @@
-package lab4Java;
+import java.io.IOException;
 
 public class Main {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws IOException {
 		StringProcessor processor = new StringProcessor();
-		processor.showResult(processor.processText("Ooh tuu i v lj, .hj uyilk. r/ lhgd? uoiejk? world"));
+		String str = processor.readInputText();
+		processor.showResult(processor.processText(str));
 
 	}
 }
