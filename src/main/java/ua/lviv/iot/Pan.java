@@ -2,6 +2,10 @@ package ua.lviv.iot;
 
 public class Pan extends Dishes {
 
+    public Pan(final int price, final Material dishesMaterial, final DishesType type, final String dishName) {
+        super(price, dishesMaterial, type, dishName);
+    }
+
     public Pan(final Color colorPan, final boolean cover, final double volume, final int price,
                final Material dishesMaterial, final DishesType type, final String dishName) {
         super(price, dishesMaterial, type, dishName);

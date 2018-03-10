@@ -14,8 +14,12 @@ public class PartyManager {
         dishesList.add(newDishes);
     }
 
-    public void dishesSortByMaterial(final List<Dishes> newList) {
+    public PartyManager() {
+    }
+
+    public List<Dishes> dishesSortByMaterial(final List<Dishes> newList) {
         newList.sort((d1, d2) -> d1.getDishesMaterial().compareTo(d2.getDishesMaterial()));
+        return newList;
     }
 
     public List<Dishes> findByDishName(final String... dishNames) {
