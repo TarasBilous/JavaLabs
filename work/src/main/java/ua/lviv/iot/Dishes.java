@@ -1,12 +1,22 @@
 package ua.lviv.iot;
 
-public abstract class Dishes {
+public class Dishes {
 
     private int price;
     private Material dishesMaterial;
     private DishesType type;
 
     private String dishName;
+
+    public Dishes() {
+    }
+
+    public Dishes(int price, Material dishesMaterial, DishesType type, String dishName) {
+        this.price = price;
+        this.dishesMaterial = dishesMaterial;
+        this.type = type;
+        this.dishName = dishName;
+    }
 
     public int getPrice() {
         return price;
@@ -32,14 +42,6 @@ public abstract class Dishes {
         this.type = type;
     }
 
-    public Dishes(final int price, final Material dishesMaterial, final DishesType type, final String dishName) {
-        super();
-        this.price = price;
-        this.dishesMaterial = dishesMaterial;
-        this.type = type;
-        this.dishName = dishName;
-    }
-
     public String getDishName() {
         return dishName;
     }
@@ -51,14 +53,5 @@ public abstract class Dishes {
     public String toString() {
         return "   " + dishName + ", " + dishesMaterial;
     }
-
-    public String getHeaders() {
-        return "price,dishes_material,type";
-    }
-
-    public String toCSV() {
-        return getPrice() + "," + getDishesMaterial() + "," + getType();
-    }
-
 
 }

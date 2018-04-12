@@ -36,8 +36,7 @@ public class PartyManagerTest {
     private static final Dishes cupSmall = new Cup(volumeCupSmall, priceCupSmall, Material.CERAMICS, DishesType.TABLEWARE, "cupSmall");
     private static final Dishes cupBig = new Cup(volumeCupBig, priceCupBig, Material.PORCELAIN, DishesType.TABLEWARE, "cupBig");
     private static final Dishes fryingPanSmall = new FryingPan(true, 3.5, 200, Material.GLASS, DishesType.KITCHENWARE, "fryingPanSmall");
-    private static final Dishes panSmall = new Pan(Color.BLACK, true, volumePanSmall, pricePanSmall, Material.GLASS,
-            DishesType.KITCHENWARE, "panSmall");
+    private static final Dishes panSmall = new Pan( 80, Material.GLASS, DishesType.KITCHENWARE, "panSmall", 80, 4.5,  Color.BLACK, true);
     private static final Dishes plateBig = new Plate(volumePlateBig, pricePlateBig, Material.CERAMICS, DishesType.TABLEWARE, "plateBig");
 
     private static final PartyManager ivan = new PartyManager();
@@ -91,9 +90,4 @@ public class PartyManagerTest {
         assertEquals(cupBig, testList.get(4));
     }
 
-    @Test
-    void writeFile() {
-        DishesWriter toyWriter = new DishesWriter();
-        toyWriter.writeToFile(ivan.getDishesList());
-    }
 }

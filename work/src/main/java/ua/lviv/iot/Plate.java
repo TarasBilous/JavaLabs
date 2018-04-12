@@ -7,6 +7,9 @@ public class Plate extends Dishes {
         this.diameter = diameter;
     }
 
+    public Plate() {
+    }
+
     private double diameter;
 
     public double getDiameter() {
@@ -17,11 +20,4 @@ public class Plate extends Dishes {
         this.diameter = diameter;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "diameter";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + getDiameter();
-    }
 }

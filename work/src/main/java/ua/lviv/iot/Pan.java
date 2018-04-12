@@ -2,21 +2,22 @@ package ua.lviv.iot;
 
 public class Pan extends Dishes {
 
-    public Pan(final int price, final Material dishesMaterial, final DishesType type, final String dishName) {
-        super(price, dishesMaterial, type, dishName);
-    }
-
-    public Pan(final Color colorPan, final boolean cover, final double volume, final int price,
-               final Material dishesMaterial, final DishesType type, final String dishName) {
-        super(price, dishesMaterial, type, dishName);
-        this.colorPan = colorPan;
-        this.cover = cover;
-        this.volume = volume;
-    }
-
+    private Integer id;
+    private double volume;
     private Color colorPan;
     private boolean cover;
-    private double volume;
+
+    public Pan() {
+    }
+
+    public Pan(int price, Material dishesMaterial, DishesType type, String dishName,
+               Integer id, double volume, Color colorPan, boolean cover) {
+        super(price, dishesMaterial, type, dishName);
+        this.id = id;
+        this.volume = volume;
+        this.colorPan = colorPan;
+        this.cover = cover;
+    }
 
     public Color getColorPan() {
         return colorPan;
@@ -42,11 +43,11 @@ public class Pan extends Dishes {
         this.volume = volume;
     }
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "color_pan" + "," + "cover" + "," + "volume";
+    public final Integer getId() {
+        return id;
     }
 
-    public String toCSV() {
-        return super.toCSV() + "," + getColorPan() + "," + isCover() + "," + getVolume();
+    public final void setId(Integer id) {
+        this.id = id;
     }
 }

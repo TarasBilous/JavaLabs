@@ -9,16 +9,12 @@ public class FryingPan extends Dishes {
         this.volume = volume;
     }
 
+    public FryingPan() {
+    }
+
     private boolean cover;
     private double volume;
 
-    public String getHeaders() {
-        return super.getHeaders() + "," + "cover" + "," + "volume";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + isCover() + "," + getVolume();
-    }
 
     public boolean isCover() {
         return cover;

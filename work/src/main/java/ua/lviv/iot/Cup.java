@@ -7,15 +7,10 @@ public class Cup extends Dishes {
         volume = volumeCup;
     }
 
+    public Cup() {
+    }
+
     private double volume;
-
-    public String getHeaders() {
-        return super.getHeaders() + "," + "volume";
-    }
-
-    public String toCSV() {
-        return super.toCSV() + "," + getVolume();
-    }
 
     public double getVolume() {
         return volume;

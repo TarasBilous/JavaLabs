@@ -6,8 +6,7 @@ import static org.junit.Assert.*;
 
 public class PanTest {
 
-    private Pan testPan = new Pan(Color.BLACK, true, 2.5, 150, Material.GLASS,
-            DishesType.KITCHENWARE, "panSmall");
+    private Pan testPan = new Pan( 80, Material.GLASS, DishesType.KITCHENWARE, "panSmall", 80, 4.5,  Color.BLACK, true);
 
     @Test
     public void getColorPan() {
